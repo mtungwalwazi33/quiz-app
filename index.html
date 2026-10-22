@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizApp - Interactive Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+    <main class="quiz-container">
+        <header class="header">
+            <h1>QuizApp</h1>
+            <p>Test your knowledge of web development</p>
+        </header>
+
+        <section id="quiz-screen">
+            <div class="quiz-info">
+                <span id="question-count">Question 1 of 10</span>
+                <span id="score-display">Score: 0</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+
+            <h2 id="question">Question appears here</h2>
+
+            <form id="answer-form">
+                <fieldset id="answer-options">
+                    <legend>Select your answer</legend>
+                    <!-- TypeScript adds answer options here -->
+                </fieldset>
+
+                <p id="feedback" aria-live="polite"></p>
+
+                <div class="button-group">
+                    <button type="submit" id="submit-button">
+                        Submit Answer
+                    </button>
+
+                    <button type="button" id="next-button" hidden>
+                        Next Question
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section id="result-screen" hidden>
+            <div class="trophy">🏆</div>
+            <h2>Quiz Completed!</h2>
+            <p id="result-message"></p>
+
+            <div class="result-card">
+                <p>Your final score</p>
+                <h3 id="final-score">0 / 10</h3>
+                <p id="percentage">0%</p>
+            </div>
+
+            <button type="button" id="restart-button">
+                Restart Quiz
+            </button>
+        </section>
+
+        <footer>
+            Built with HTML, CSS and TypeScript
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,261 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #10172a, #334b80);
+    color: #1e293b;
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 650px;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #5145cd;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.progress-track {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+#progress-bar {
+    width: 0;
+    height: 100%;
+    background: #5145cd;
+    transition: width 0.3s ease;
+}
+
+#question {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#answer-options {
+    border: none;
+    min-width: 0;
+}
+
+#answer-options legend {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.option:hover {
+    border-color: #5145cd;
+    background: #f5f3ff;
+}
+
+.option:has(input:checked) {
+    border-color: #5145cd;
+    background: #f5f3ff;
+}
+
+#answer-options .option.correct {
+    border-color: #15803d;
+    background: #f0fdf4;
+}
+
+#answer-options .option.correct input {
+    accent-color: #15803d;
+}
+
+#answer-options .option.wrong {
+    border-color: #b91c1c;
+    background: #fef2f2;
+}
+
+#answer-options .option.wrong input {
+    accent-color: #b91c1c;
+}
+
+.option input {
+    width: 18px;
+    height: 18px;
+    accent-color: #5145cd;
+    flex-shrink: 0;
+}
+
+.option label {
+    flex: 1;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+#feedback {
+    min-height: 26px;
+    margin: 16px 0;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+#feedback.success {
+    color: #15803d;
+}
+
+#feedback.error {
+    color: #b91c1c;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 9px;
+    background: #5145cd;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button-group button {
+    flex: 1;
+}
+
+button:hover:not(:disabled) {
+    background: #3f35a8;
+    transform: translateY(-1px);
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #818cf8;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#result-screen {
+    text-align: center;
+}
+
+#result-screen h2 {
+    margin-bottom: 12px;
+}
+
+#result-message {
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.trophy {
+    font-size: 55px;
+    margin-bottom: 12px;
+}
+
+.result-card {
+    padding: 25px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    background: #f5f3ff;
+}
+
+.result-card h3 {
+    color: #5145cd;
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.result-card p {
+    color: #64748b;
+}
+
+#restart-button {
+    width: 100%;
+}
+
+footer {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 22px 17px;
+    }
+
+    .header h1 {
+        font-size: 27px;
+    }
+
+    #question {
+        font-size: 19px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group button {
+        width: 100%;
+    }
+}
