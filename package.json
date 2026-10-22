@@ -1,6 +1,10 @@
 {
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive QuizApp built with TypeScript, HTML and CSS",
   "scripts": {
-    "build": "tsc quiz.ts --target ES2021 --lib DOM,ES2021 --outDir ."
+    "build": "tsc quiz.ts --target ES2021 --lib DOM,ES2021 --outDir public"
   },
   "devDependencies": {
     "typescript": "^7.0.2"

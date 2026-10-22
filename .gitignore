@@ -1,0 +1,10 @@
+# Dependencies (never commit these - they contain platform specific binaries)
+node_modules
+
+# Vercel
+.vercel
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
